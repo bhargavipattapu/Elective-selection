@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>login page</title>
+<script>
+function validate(f2)
+{
+if(f2.username.value.length<4)
+{
+alert("enter more than 6 characters");
+return false;
+}
+if(f2.pass.value.length<4)
+{
+alert("enter more than 6 characters in password");
+return false;
+}
+}
+</script>
+<style>
+.one
+{
+background-image:url("admin.jpg");
+background-repeat:no-repeat;
+background-size:1800px 800px;
+}
+.login
+{
+background-color :purple;
+border :none;
+color :white;
+padding:15px 32px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:16px
+margin:4px 2px;
+cursor:pointer;
+}
+
+</style>
+</head>
+<body class="one">
+<center>
+<h1 style="color:blue;"><b>Admin Login<b></h1>
+<table border="0"  width="300"height="300">
+<td>
+<form name="f2"action="retriving.php" method="post"onsubmit="return validate(f2)">
+<center><h2>Username <input type="text"name="username"></h2><br><br></center>
+<center><h2>Password <input type="password"name="pass"></h2><br><br></center>
+<center><input type="submit" name="submit" value="Login"class="login"></center>
+</form>
+</body>
+</td>
+</table>
+</center>
+</html>
