@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title>login page</title>
+<script>
+function validate(f2)
+{
+if(f2.username.value.length<6)
+{
+alert("enter more than 6 characters");
+return false;
+}
+if(f2.pass.value.length<6)
+{
+alert("enter more than 6 characters in password");
+return false;
+}
+}
+</script>
+<style>
+.one
+{
+background-image:url("sai.jpg");
+background-repeat:no-repeat;
+background-size:1800px 700px;
+}
+.login
+{
+background-color :maroon;
+border :none;
+color :white;
+padding:15px 32px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:16px
+margin:4px 2px;
+cursor:pointer;
+}
+</style>
+</head>
+<body class="one">
+<center>
+<h1 style="color:purple";>Student Login</h1>
+<!--<table border="1"  width="300"height="300">-->
+<td>
+<form name="f2"action="studentlogin.php" method="post">
+<center><h2>Username <input type="text"name="username"></h2><br><br></center>
+<center><h2>Password <input type="password"name="pass"></h2><br><br></center>
+<center><input type="submit" name="submit" value="Login"class="login" onclick="return validate(f2)"></center>
+</form>
+</body>
+</td>
+</table>
+</center>
+</html>

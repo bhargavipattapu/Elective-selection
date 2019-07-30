@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>registration</title>
+<script>
+function validate(f2){
+	
+if(f2.username.value.length<6)
+
+{
+
+alert("please enter more than 6 characters in name");
+
+return false;
+
+}
+
+
+if(f2.reg.value.length!=10)
+
+{
+
+alert("please enter correct reg number")
+
+return false;
+
+}
+
+if(f2.pass.value.length<6)
+
+{
+
+alert("please enter more than 6 characters in password")
+
+return false;
+
+}
+
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9])+$/;
+ if (!filter.test(f2.email.value))
+ {
+    
+alert('Please provide a valid email address');
+    
+return false;
+ 
+}
+
+
+if(f2.pho.value.length!=10 )
+
+{
+
+alert("enter valid number");
+
+return false;
+if(f2.gender)
+
+{
+
+alert("please enter more than 6 characters in name");
+
+return false;
+
+}
+}
+
+//window.location.href="registration.php";
+}
+</script>
+
+</head>
+<body bgcolor="#f7e4e1";>
+
+<center>
+<center><table border="2"width="500"height="300" bgcolor="#dbd0bd">
+<td>
+<form name="f2" action="registration.php" method="post" >
+<center><h1>Registration Form </h1><br></center>
+<center>name <input type="text"name="username"></center><br><br>
+<center>redg no <input type="text"name="reg"></center><br><br>
+<!--<center>branch <input type="text"name="branch"required></center><br><br>!-->
+<center>email <input type="text"name="email"></center><br><br>
+<center>password <input type="password"name="pass"keyword="pass"></center><br><br>
+<center>mobileno <input type="number"name="pho"></center><br>
+<center>branch  <select name="branch">
+	<option selected>CSE</option>
+	<option selected>EEE</option>
+	<option selected>ECE</option>
+	<option selected>IT</option>
+	<option selected>MECH</option>
+	<option selected>CIVIL</option>
+</select></center>
+<br>
+<br>
+<center><input type="submit"  name="submit" onclick="return validate(f2)" value="Login"></center><br>
+</form>
+</td>
+</table>
+</center>
+
+
+</center>
+</body>
+</html>
+ 

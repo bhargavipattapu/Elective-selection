@@ -1,0 +1,3 @@
+database name:svecw
+tables:reg(name,redgno,email,password,mobileno,subject,branch)
+studentlogin(username,pass)
